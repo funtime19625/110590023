@@ -1,0 +1,11 @@
+/*write your style here*/
+table{
+
+    border: 1px solid;
+    background-color: rgb(128, 128, 12);
+    width: 200px;
+}
+tr td{
+    border: 1px solid;
+    border-color: black;
+}
