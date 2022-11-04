@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>1104</title>
+        <link rel="stylesheet" href="teststyle.css">
+    </head>
+
+    
+    <body>
+        <canvas id="myCanvas" width="500" height="500" style="border:1px solid black;"></canvas>
+        <div id="block1">
+            <p>123456789</p>
+            <script>
+                var c = document.getElementById("myCanvas");
+                var ctx = c.getContext("2d")
+                //create gradient
+                var grdRed = ctx.createLinearGradient(0,0,200,0);
+                grdRed.addColorStop(0,"white");
+                grdRed.addColorStop(1,"red");
+                //fill with gradient
+                ctx.fillStyle = grdRed;
+                ctx.fillRect(10,10,150,80);
+                
+                var grdBlue = ctx.createLinearGradient(35,35,200,0);
+                grdBlue.addColorStop(0,"blue");
+                grdBlue.addColorStop(1,"white");
+                //fill with gradient
+                ctx.fillStyle = grdBlue;
+                ctx.globalAlpha=0.5;
+                ctx.fillRect(80,45,150,90);
+                
+                ctx.strokeStyle="#376b4d"
+                ctx.beginPath();
+                ctx.moveTo(10, 100);
+                ctx.lineTo(70, 100);
+                ctx.lineTo(70, 150);
+                ctx.lineTo(250, 150);
+                ctx.stroke();
+                
+                ctx.lineWidth=3;
+                ctx.beginPath();
+                ctx.arc(230,45,15,Math.PI/2,Math.PI,true);
+                ctx.stroke();
+
+                ctx.font = "30px Arial";
+                ctx.fillStyle = "black";
+                ctx.globalAlpha=1;
+                ctx.fillText("Hello World", 85, 85);
+            </script>
+        </div>
+        
+    </body>
+</html>
